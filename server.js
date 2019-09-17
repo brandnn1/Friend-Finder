@@ -20,8 +20,8 @@ var PORT = 4400;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-var friends = []
 
+var bestFriend = []
 app.get("/", function(req, res) {
     //use the response object to invoke the sendFile method
     //path.
@@ -32,22 +32,24 @@ app.get("/", function(req, res) {
       res.sendFile(path.join(__dirname, "/app/public/survey.html"));
     });
     
-    // Displays all characters
+    // Displays all friends
     app.get("/api/friends", function(req, res) {
         return res.json(friends);
     });
     app.post("/api/friends", function(req, res) {
         var newFriend = req.body;
-    
         // Using a RegEx Pattern to remove spaces from newReservation
         // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
         //newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
       
         // console.log(newReservation);
-      
-        friends.push(newFriend);
-        console.log(res.json(newFriend))
-        return res.json(newFriend);
+        
+
+        friendsArr.push(newFriend);
+
+
+        console.log(bestFriend)
+        return res.json(bestFriend);
     });
     
 
