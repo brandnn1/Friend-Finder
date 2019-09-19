@@ -1,4 +1,4 @@
-var friendsArr = [
+var friendList = [
 {
     name: 'The Demogorgon',
     picture: 'https://vignette.wikia.nocookie.net/animaljam/images/8/8a/Demogorgon.jpg/revision/latest?cb=20171122032931',
@@ -33,4 +33,4 @@ var friendsArr = [
 
 
 
-module.exports = friendsArr;
+module.exports = friendList;
