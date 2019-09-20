@@ -12,7 +12,7 @@ Friend-Finder is a full stack application that captures user survey input, compa
 https://lit-caverns-27099.herokuapp.com/
 
 The home page is very simplistic. It allows a user to enter the survey, look at the current friends table by making an api call or going to the github repo.
-![Home Screen Capture](/images/home.PNG)
+![Home Screen Capture](/images/home.png)
 
 
 #### -Survey View-
