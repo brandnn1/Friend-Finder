@@ -1,26 +1,26 @@
 var path = require('path');
 var friendList = require('../data/friends')
-var mysql = require("mysql");
+//var mysql = require("mysql");
 
 
-//not used
-var connection = mysql.createConnection({
-  host: "localhost",
+// //not used
+// var connection = mysql.createConnection({
+//   host: "localhost",
 
-  // Your port; if not 3306
-  port: 3306,
+//   // Your port; if not 3306
+//   port: 3306,
 
-  // Your username
-  user: "root",
+//   // Your username
+//   user: "root",
 
-  // Your password
-  password: "FloatingUnicornHorns",
-  database: "friends"
-});
-//not used
-connection.connect(function(err) {
-  if (err) throw err;
-});
+//   // Your password
+//   password: "FloatingUnicornHorns",
+//   database: "friends"
+// });
+// //not used
+// connection.connect(function(err) {
+//   if (err) throw err;
+// });
 
 
 module.exports = function(app){
@@ -70,11 +70,11 @@ app.post('/api/friends', function(req,res){
 //////////////////////////
 
 
-app.get("/friendsList", function(req, res) {
+// app.get("/friendsList", function(req, res) {
     
-    connection.query("SELECT * FROM friendsList", function(err, result) {
-      if (err) throw err;
-      res.json(result);
-    });
-  });
-}
+//     connection.query("SELECT * FROM friendsList", function(err, result) {
+//       if (err) throw err;
+//       res.json(result);
+//     });
+//   });
+// }
