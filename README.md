@@ -1,5 +1,5 @@
 
-# Friend-Finder
+# Friend Finder - Node and Express Servers
 
 ## Overview
 Friend-Finder is a full stack application that captures user survey input, compares that input to existing user inputs in a database, calculates the individual that best matches the user and displays that match. After the match is completed, the database is updated with the new inputs so that person can be matched to a new user. 
