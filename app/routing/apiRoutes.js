@@ -59,9 +59,10 @@ app.post('/api/friends', function(req,res){
           bestMatch = i;
         }
       }
-  
+    
       //return bestMatch data
       var bff = friendList[bestMatch];
+      console.log(bff)
       res.json(bff);
   
       //pushes new submission into the friendsList array
@@ -78,4 +79,4 @@ app.get("/friendsList", function(req, res) {
       res.json(result);
     });
   });
-  
+}
