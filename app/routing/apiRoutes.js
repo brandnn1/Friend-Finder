@@ -66,7 +66,7 @@ app.post('/api/friends', function(req,res){
       //pushes new submission into the friendsList array
       friendList.push(newFriend);
   });
-
+}
 //////////////////////////
 
 
