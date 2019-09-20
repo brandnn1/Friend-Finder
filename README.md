@@ -1,13 +1,15 @@
 
 # Friend Finder - Node and Express Servers
 
+
+
 ## Overview
 Friend-Finder is a full stack application that captures user survey input, compares that input to existing user inputs in a database, calculates the individual that best matches the user and displays that match. After the match is completed, the database is updated with the new inputs so that person can be matched to a new user. 
 
 
 #### -Home Page-
 
-localhost:8080 (or whatever port heroku assigns)
+https://lit-caverns-27099.herokuapp.com/
 
 The home page is very simplistic. It allows a user to enter the survey, look at the current friends table by making an api call or going to the github repo.
 ![Home Screen Capture](/images/home.PNG)
