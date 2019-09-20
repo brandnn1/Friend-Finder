@@ -3,7 +3,7 @@ var friendList = require('../data/friends')
 var mysql = require("mysql");
 
 
-
+//not used
 var connection = mysql.createConnection({
   host: "localhost",
 
@@ -17,13 +17,11 @@ var connection = mysql.createConnection({
   password: "FloatingUnicornHorns",
   database: "friends"
 });
-
+//not used
 connection.connect(function(err) {
   if (err) throw err;
 });
 
-
-var bestFriend = [];
 
 module.exports = function(app){
 // Displays all friends
@@ -39,7 +37,7 @@ app.post('/api/friends', function(req,res){
       var newFriend = req.body;
       var newFriendScores = req.body.scores;
       var scoresArray = [];
-      var bestMatch = 0;
+      var bestFriend = 0;
   
       //runs through all current friends in list
       for(var i=0; i<friendList.length; i++){
@@ -55,15 +53,15 @@ app.post('/api/friends', function(req,res){
   
       //after all friends are compared, find best match
       for(var i=0; i<scoresArray.length; i++){
-        if(scoresArray[i] <= scoresArray[bestMatch]){
-          bestMatch = i;
+        if(scoresArray[i] <= scoresArray[bestFriend]){
+          bestFriend = i;
         }
       }
     
-      //return bestMatch data
-      var bff = friendList[bestMatch];
-      console.log(bff)
-      res.json(bff);
+      //return bestFriend data
+      var superBestFriend = friendList[bestFriend];
+      console.log(superBestFriend)
+      res.json(superBestFriend);
   
       //pushes new submission into the friendsList array
       friendList.push(newFriend);

@@ -35,7 +35,7 @@
     <hr>
 
     <h3><strong>Question 1</strong></h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h4>You are often envious of others.</h4>
     <select class="chosen-select" id="q1">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -46,7 +46,7 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <h4>You often find yourself lost in thought when you are walking in nature.</h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -57,7 +57,7 @@
     </select>
 
     <h3><strong>Question 3</strong></h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <h4>You enjoy going to social events that involve dress-up or role-play activities.</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -68,7 +68,7 @@
     </select>
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <h4>If you had a business, you would find it very difficult to fire loyal but underperforming employees. </h4>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -79,7 +79,7 @@
     </select>
 
     <h3><strong>Question 5</strong></h3>
-    <h4>People can rarely upset you.</h4>
+    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -90,7 +90,7 @@
     </select>
 
     <h3><strong>Question 6</strong></h3>
-    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <h4>You usually find it difficult to relax when talking in front of many people.</h4>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -101,7 +101,7 @@
     </select>
 
     <h3><strong>Question 7</strong></h3>
-    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <h4>You believe that it is more rewarding to be liked by others than to be powerful. </h4>
     <select class="chosen-select" id="q7">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -111,7 +111,7 @@
       <option value=5>5 (Strongly Agree)</option>
     </select>
     <h3><strong>Question 8</strong></h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <h4>Your home and work environments are quite tidy.</h4>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -122,8 +122,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
-    </h4>
+    <h4>You often spend time exploring unrealistic and impractical yet intriguing ideas. </h4>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value=1>1 (Strongly Disagree)</option>
@@ -155,8 +154,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/brandnn1/Friend-Finder">GitHub
-            Repo</a>| <a href="/api/clear">Empty Friend List</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/brandnn1/Friend-Finder">GitHub Repo</a></p>
       </div>
     </footer>
 
@@ -173,8 +171,8 @@
           <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
         <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img"
+          <h2 id="matchName"></h2>
+          <img id="matchPic"
             src="https://cdn.pinkvilla.com/files/styles/contentpreview/public/Avengers%20Endgame%20Leaked%20images%20show%20that%20Iron%20Man%20will%20be%20seen%20in%20SEVERAL%20suits%20%282%29.jpg"
             alt="">
         </div>
@@ -256,8 +254,8 @@
         $.post("/api/friends", userData, function (data) {
           console.log(data)
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.picture);
+          $("#matchName").text(data.name);
+          $("#matchPic").attr("src", data.picture);
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
